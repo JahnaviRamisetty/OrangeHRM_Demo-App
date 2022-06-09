@@ -1,0 +1,11 @@
+06/09/2022 09:40:14 AM: INFO: 
+
+06/09/2022 09:40:14 AM: INFO: ====== WebDriver manager ======
+06/09/2022 09:40:15 AM: INFO: Current google-chrome version is 102.0.5005
+06/09/2022 09:40:15 AM: INFO: Get LATEST chromedriver version for 102.0.5005 google-chrome
+06/09/2022 09:40:15 AM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\102.0.5005.61\chromedriver.exe] found in cache
+06/09/2022 09:40:17 AM: INFO: ********* Test_001_login *********
+06/09/2022 09:40:22 AM: INFO: ********* Open Loginpage  *********
+06/09/2022 09:40:24 AM: INFO: ********* Loginpage close *********
+06/09/2022 09:40:24 AM: ERROR: ********* Open adminpage  *********
+06/09/2022 09:40:24 AM: INFO: ********* close adminpage  *********

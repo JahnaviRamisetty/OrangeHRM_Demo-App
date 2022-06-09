@@ -1,0 +1,11 @@
+[32mINFO    [0m WDM:logger.py:27 
+
+[32mINFO    [0m WDM:logger.py:27 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:27 Current google-chrome version is 101.0.4951
+[32mINFO    [0m WDM:logger.py:27 Get LATEST chromedriver version for 101.0.4951 google-chrome
+[32mINFO    [0m WDM:logger.py:27 Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\101.0.4951.41\chromedriver.exe] found in cache
+[32mINFO    [0m root:test_login.py:17 ********* Test_001_login *********
+[32mINFO    [0m root:test_login.py:20 ********* Open Loginpage  *********
+[32mINFO    [0m root:test_login.py:23 ********* Loginpage close *********
+[32mINFO    [0m root:test_admin.py:23 ********* Open adminpage  *********
+[32mINFO    [0m root:test_admin.py:26 ********* Open addlocation page  *********
