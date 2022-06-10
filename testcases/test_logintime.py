@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 from testcases.test_login import Test_login
 
-from pageobjects.Admin.login_time import Time
+from pageobjects.Admin.Login_timesheet import Time
 #@pytest.mark.sanity
 @pytest.mark.usefixtures("test_logintopage")
 class Test_Time(Test_login):

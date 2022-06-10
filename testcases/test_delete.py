@@ -11,7 +11,7 @@ class Test_Delete(Test_login):
         self.ad2 = Admin2(self.driver)
         self.ad2.setadmin2()
         self.logger1.info("--------open adminpage--------")
-        location = "n01"
+        location = "navya"
         self.logger1.info("------delete location-----")
         self.ad2.loc_delete(location)
 
