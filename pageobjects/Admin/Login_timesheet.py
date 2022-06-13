@@ -27,6 +27,8 @@ class Time(BaseDriver):
     wed_xp = "//input[@id='initialRows_0_2']"
     thu_xp = "//input[@id='initialRows_0_3']"
     fri_xp = "//input[@id='initialRows_0_4']"
+    sat_id="initialRows_0_5"
+    sun_id="initialRows_0_6"
     save_btn = "//input[@id='submitSave']"
     addrow_xp = "//input[@id='btnAddRow']"
     employeetimesheet_id="menu_time_viewEmployeeTimesheet"
@@ -37,6 +39,8 @@ class Time(BaseDriver):
     title_xp="//*[@id='ui-datepicker-div']/div/div"
     calenbox_xp="//*[@id='ui-datepicker-div']/table"
     ok_id="addTimesheetBtn"
+    save_id="submitSave"
+
 
     def __init__(self, driver):
         self.driver = driver
@@ -56,13 +60,8 @@ class Time(BaseDriver):
         self.driver.find_element(By.ID,self.edit_id).click()
 
 
-    sheet = ["prjname",'activity','mon','tues']
-    def table_data(self,prjname,activity,mon,tues):
-                self.driver.find_element(By.XPATH, self.addrow_xp).click()
-                self.driver.find_element(By.XPATH, self.addrow_xp).click()
-                self.driver.find_element(By.XPATH, self.addrow_xp).click()
-                self.driver.find_element(By.XPATH, self.addrow_xp).click()
-                self.driver.find_element(By.XPATH, self.addrow_xp).click()
+
+    def table_data(self,prjname,activity,mon,tues,wed,thur,fri,sat,sun):
                 drp_down1 = self.driver.find_element(By.ID, self.project_id)
                 drp_down1.clear()
                 drp_down1.send_keys(prjname)
@@ -76,6 +75,12 @@ class Time(BaseDriver):
 
                 self.driver.find_element(By.XPATH,self.mon6_xp).send_keys(mon)
                 self.driver.find_element(By.ID,self.tues_id).send_keys(tues)
+                self.driver.find_element(By.XPATH, self.wed_xp).send_keys(wed)
+                self.driver.find_element(By.XPATH, self.thu_xp).send_keys(thur)
+                self.driver.find_element(By.XPATH, self.fri_xp).send_keys(fri)
+                self.driver.find_element(By.ID, self.sat_id).send_keys(sat)
+                self.driver.find_element(By.ID, self.sun_id).send_keys(sun)
+                self.driver.find_element(By.ID,self.save_id).click()
 
                 # break
 
@@ -141,9 +146,12 @@ class Time(BaseDriver):
        #time.sleep(3)
         self.driver.find_element(By.ID, self.viewbtn_id).click()
         self.driver.find_element(By.ID,self.addtimesheet_id).click()
+        time.sleep(2)
         self.driver.find_element(By.ID,self.calender_id).click()
         self.driver.find_element(By.XPATH,self.title_xp).click()
+        time.sleep(1)
         self.driver.find_element(By.XPATH,self.calenbox_xp).click()
+        time.sleep(1)
         self.driver.find_element(By.ID,self.ok_id).click()
 
 
