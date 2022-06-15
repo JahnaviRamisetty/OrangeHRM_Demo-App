@@ -1,8 +1,8 @@
 import pytest
 import allure
-from testcases.test_login import Test_login
+from TestCases.test_login import Test_login
 from pageobjects.Admin.login_org import Admin2
-from testcases.test_addloc import Test_Addloc
+from TestCases.test_addloc import Test_Addloc
 @pytest.mark.usefixtures("test_logintopage")
 class Test_verify(Test_login):
     ad3 = Test_Addloc

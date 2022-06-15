@@ -2,7 +2,7 @@ import allure
 import pytest
 from pageobjects.Admin.admin_org_geninfo import Admin_Org
 #from pageobjects.Admin.login_org import Admin2
-from testcases.test_login import Test_login
+from TestCases.test_login import Test_login
 #from pageobjects.Admin import addloc
 
 

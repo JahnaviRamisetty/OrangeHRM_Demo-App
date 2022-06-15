@@ -3,7 +3,7 @@ import time
 import pytest
 from selenium.webdriver.common.by import By
 
-from testcases.test_login import Test_login
+from TestCases.test_login import Test_login
 
 from pageobjects.performance import configure
 #@pytest.mark.sanity

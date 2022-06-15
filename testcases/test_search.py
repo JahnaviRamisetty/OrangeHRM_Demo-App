@@ -1,6 +1,6 @@
 import pytest
 import allure
-from testcases.test_login import Test_login
+from TestCases.test_login import Test_login
 from pageobjects.Admin.login_org import Admin2
 
 @pytest.mark.usefixtures("test_logintopage")

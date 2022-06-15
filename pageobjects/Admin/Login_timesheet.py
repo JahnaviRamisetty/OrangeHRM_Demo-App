@@ -31,15 +31,24 @@ class Time(BaseDriver):
     sun_id="initialRows_0_6"
     save_btn = "//input[@id='submitSave']"
     addrow_xp = "//input[@id='btnAddRow']"
+
     employeetimesheet_id="menu_time_viewEmployeeTimesheet"
     employeename_id="employee"
     viewbtn_id="btnView"
-    addtimesheet_id="btnAddTimesheet"
+    addtimesheet_id="Add Timesheet"
     calender_id="time_date"
     title_xp="//*[@id='ui-datepicker-div']/div/div"
     calenbox_xp="//*[@id='ui-datepicker-div']/table"
     ok_id="addTimesheetBtn"
     save_id="submitSave"
+    attendance_id="menu_attendance_Attendance"
+    punch_id="menu_attendance_punchIn"
+    note_id="attendance_note"
+    punchin_id="btnPunch"
+    noteout_id="attendance_note"
+    punchout_id="btnPunch"
+    employee_id= "menu_attendance_viewAttendanceRecord"
+    employeename_id="attendance_employeeName_empName"
 
 
     def __init__(self, driver):
@@ -145,14 +154,38 @@ class Time(BaseDriver):
         self.driver.find_element(By.ID,self.employeename_id).send_keys(Keys.ENTER)
        #time.sleep(3)
         self.driver.find_element(By.ID, self.viewbtn_id).click()
-        self.driver.find_element(By.ID,self.addtimesheet_id).click()
-        time.sleep(2)
+        self.wait_until_element_is_clickable(By.LINK_TEXT,self.addtimesheet_id).click()
+        #time.sleep(1)
         self.driver.find_element(By.ID,self.calender_id).click()
         self.driver.find_element(By.XPATH,self.title_xp).click()
         time.sleep(1)
         self.driver.find_element(By.XPATH,self.calenbox_xp).click()
         time.sleep(1)
         self.driver.find_element(By.ID,self.ok_id).click()
+
+
+
+    def attendance(self,note,noteout):
+        time = self.driver.find_element(By.ID, self.time_id)
+        attendance=self.driver.find_element(By.ID,self.attendance_id)
+        punch=self.driver.find_element(By.ID,self.punch_id)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(time).move_to_element(attendance).move_to_element(punch).click().perform()
+        self.driver.find_element(By.ID,self.note_id).send_keys(note)
+        self.driver.find_element(By.ID,self.punchin_id).click()
+        self.driver.find_element(By.ID,self.noteout_id).send_keys(noteout)
+        self.driver.find_element(By.ID,self.punchout_id).click()
+
+    def employee_records(self,name):
+        time = self.driver.find_element(By.ID, self.time_id)
+        attendance = self.driver.find_element(By.ID, self.attendance_id)
+        employee=self.driver.find_element(By.ID,self.employee_id)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(time).move_to_element(attendance).move_to_element(employee).click().perform()
+        Name=self.driver.find_element(By.ID,self.employeename_id).send_keys(name)
+        Name.send_keys(Keys.ARROW_DOWN)
+        Name.send_keys(Keys.ENTER)
+
 
 
 

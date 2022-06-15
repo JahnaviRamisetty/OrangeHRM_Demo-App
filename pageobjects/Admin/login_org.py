@@ -98,9 +98,9 @@ class Admin2(BaseDriver):
 
         if 'Successfully Saved' in self.data:
             assert True
-            print("mommy")
+            print("success")
         else:
-            # self.driver.save_screenshot(".\\SCREENSHOTS\\" + "locationadding in ORANGEhrm.png")  # Screenshot
+            self.driver.save_screenshot(".\\screenshots\\" + "locationadding in ORANGEhrm.png")  # Screenshot
             assert False
 
         self.driver.close()
