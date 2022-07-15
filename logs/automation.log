@@ -1,9 +1,11 @@
-06/14/2022 03:06:16 PM: INFO: 
+07/15/2022 12:23:31 PM: INFO: 
 
-06/14/2022 03:06:16 PM: INFO: ====== WebDriver manager ======
-06/14/2022 03:06:17 PM: INFO: Current google-chrome version is 102.0.5005
-06/14/2022 03:06:17 PM: INFO: Get LATEST chromedriver version for 102.0.5005 google-chrome
-06/14/2022 03:06:17 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\102.0.5005.61\chromedriver.exe] found in cache
-06/14/2022 03:06:18 PM: INFO: ********* Test_001_login *********
-06/14/2022 03:06:45 PM: INFO: ********* Open Loginpage  *********
-06/14/2022 03:06:52 PM: INFO: ********* Loginpage close *********
+07/15/2022 12:23:31 PM: INFO: ====== WebDriver manager ======
+07/15/2022 12:23:32 PM: INFO: Current google-chrome version is 103.0.5060
+07/15/2022 12:23:32 PM: INFO: Get LATEST chromedriver version for 103.0.5060 google-chrome
+07/15/2022 12:23:32 PM: INFO: Driver [C:\Users\User\.wdm\drivers\chromedriver\win32\103.0.5060.53\chromedriver.exe] found in cache
+07/15/2022 12:23:34 PM: INFO: ********* Test_001_login *********
+07/15/2022 12:23:40 PM: INFO: ********* Open Loginpage  *********
+07/15/2022 12:23:45 PM: INFO: ********* Loginpage close *********
+07/15/2022 12:23:45 PM: ERROR: ********* Open adminpage  *********
+07/15/2022 12:23:45 PM: INFO: ********* close adminpage  *********

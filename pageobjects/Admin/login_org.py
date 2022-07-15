@@ -128,7 +128,7 @@ class Admin2(BaseDriver):
                                                      + str(3) + self.empinfo_tb_br2)
                 value = col_value.text
                 if value == name:
-                    print(cols[c].text, end="         ")
+                    print(cols[c].text,  end="         ")
 
             print()
 
